@@ -20,23 +20,27 @@ img{display: block;}
   text-align: center;cursor: pointer;box-sizing: border-box;
   display: block;transition: all 0.4s;
 }
-.btn:hover{background: #333;color: #fff;}
+.btn:hover{background: #333;color: #fff;text-decoration: underline;}
 
 /* 색반전 버튼 */
-.btn--reverse{background: #333;color: #fff;}
-.btn--reverse:hover{background: transparent;color: #333;}
+.btn--reverse{background: rgb(11, 128, 54);color: #fff;border-color: rgb(11, 128, 54);}
+.btn--reverse:hover{background: transparent;color: #fff;border-color: #fff;}
 
-/* 브라운버튼 */
-.btn--brown{color: #592b18;border-color: #592b18;}
-.btn--brown:hover{background: #592b18;}
+/* 화이트버튼 */
+.btn--white{color: #fff;border-color: #fff;}
+.btn--white:hover{color: rgb(14, 64, 43);background: #fff;text-decoration: underline;}
 
 /* 골드버튼 */
 .btn--gold{color: #d9aa8a;border-color: #d9aa8a;}
 .btn--gold:hover{color: #fff;background: #d9aa8a;}
 
-/* 화이트버튼 */
-.btn--white{color: #fff;border-color: #fff;}
-.btn--white:hover{color: #333;background: #fff;}
+/* 화이트버튼 호버 그린 */
+.btn--white--green{color: #fff;border-color: #fff;}
+.btn--white--green:hover{color: rgb(169, 223, 83);background: #fff;text-decoration: underline;}
+
+/* 화이트버튼 호버 그린 */
+.btn--white--darkgreen{color: #fff;border-color: #fff;}
+.btn--white--darkgreen:hover{color: rgb(7, 63, 50);background: #fff;text-decoration: underline;}
 
 /* =================spay================= */
 .back-to-position{opacity: 0;transition: all 1s;}
@@ -170,7 +174,7 @@ width: 240px;}
 .notice .promotion .swiper .swiper-slide-active{opacity: 1;}
 
 /* 더보기 버튼 */
-.notice .promotion .swiper .swiper-slide .btn{position: absolute;bottom: 40px;left: 0;right: 0;margin: auto;}
+.notice .promotion .swiper .swiper-slide .btn{position: absolute;bottom: 40px;left: 0;right: 0;margin: 0 auto 15px;}
 
 /* pagination */
 .notice .promotion .swiper-pagination{bottom: 0;left: 0;right: 0;z-index: 5;}
@@ -187,38 +191,32 @@ width: 240px;}
 
 /* REWARDS Area---------------------------------------- */
 .rewards{position: relative;background: #025040;}
-.rewards .inner .bg-left{width: 30%;height: 100%;position: absolute;top: 0;left: 0;float: left;}
-.rewards .inner .bg-center{width: 70%;height: 100%;
-position: absolute;float: left;top: 0px;left: 250px;}
-.rewards .inner .bg-right{width: 10%;height: 100%;position: absolute;top: 0;right: 0;float: left;}
+.rewards .inner .bg-left{width: 20%;height: 100%;position: absolute;top: 0;left: 0;float: left;}
+.rewards .inner .bg-right{width: 80%;height: 100%;
+position: absolute;float: left;top: 0;right: 0;}
+
 
 .rewards .inner{height: 241px;}
 .rewards .inner .bg-left .rewards-logo{position: absolute;top: 30px;left: 0;width: 200px;}
 .rewards .inner .bg-left .rewards-logo img{display: block;width: 100%;}
 
-.rewards .inner .bg-center .text-group1{color: #fff;padding-top: 20px;}
-.rewards .inner .bg-center .text-group1 h3{font-size: 25px;font-weight: bold;margin-bottom: 10px;}
-.rewards .inner .bg-center .text-group1 p{font-size: 14px;line-height: 1.7;}
-.rewards .inner .bg-center .text-group1 .textbold{font-size: 18px;font-weight: bold;}
+.rewards .inner .bg-right .text-group1{color: #fff;padding-top: 20px;}
+.rewards .inner .bg-right .text-group1 h3{font-size: 25px;font-weight: bold;margin-bottom: 10px;}
+.rewards .inner .bg-right .text-group1 p{font-size: 14px;line-height: 1.4;}
+.rewards .inner .bg-right .text-group1 .textbold{font-size: 18px;font-weight: bold;}
 
-.rewards .inner .bg-center .text-group2{color: #fff;border-top: 1px solid #fff;margin-top: 15px;}
+.rewards .inner .bg-right .text-group2{color: #fff;border-top: 1px solid #fff;margin-top: 15px;padding-top: 20px;}
 
+.rewards .bg-left{width: 50%;height: 100%;position: relative;top: 0;left: 0;}
+.rewards .bg-right{width: 50%;height: 100%;position: relative;top: 0;right: 0;}
 
-.rewards .btn-group{position: absolute;right: 0;bottom: 24px;display: flex;flex-wrap: wrap;width: 250px;}
-.rewards .btn-group .join{margin-right: 10px;}
-.rewards .btn-group .sign-in{width: 110px;}
-.rewards .btn-group .gift{flex: 1;margin-top: 10px;}
+.rewards .inner{height: 241px;}
 
-/* .rewards{position: relative;}
-.rewards .bg-left{width: 50%;height: 100%;position: absolute;top: 0;left: 0;background: #272727;}
-.rewards .bg-right{width: 50%;height: 100%;position: absolute;top: 0;right: 0;background: #d5c798;}
-
-.rewards .inner{background: url(../images/rewards.jpg);height: 241px;}
-
-.rewards .btn-group{position: absolute;right: 0;bottom: 24px;display: flex;flex-wrap: wrap;width: 250px;}
-.rewards .btn-group .join{margin-right: 10px;}
-.rewards .btn-group .sign-in{width: 110px;}
-.rewards .btn-group .gift{flex: 1;margin-top: 10px;} */
+.rewards .btn-group{position: absolute;right: 0;bottom: 24px;display: flex;flex-wrap: wrap;width: 250px;top: 70px;}
+.rewards .btn-group .join{margin:0 10px 0 20px;height: 45px;}
+.rewards .btn-group .sign-in{width: 90px;height: 45px;}
+.rewards .btn-group .gift{margin-top: 15px;
+width: 230px;height: 45px;margin-left: 20px;}
 
 /* 유투브 영상------------------------------------ */
 .youtube{position: relative;height: 700px;background: #333;overflow: hidden;}
@@ -237,26 +235,33 @@ position: absolute;float: left;top: 0px;left: 250px;}
 .youtube .inner .floating2{position: absolute;top: 350px;left: 150px;}
 .season-product .floating3{position: absolute;top: -200px;right: 0;}
 
-/* SEASON PRODUCT---------------------------------- */
-.season-product{background: url(../images/season_product_bg.jpg);}
+/* VOYAGE BLEND---------------------------------- */
+.season-product{background: url(../images/2022_Summer2_bean_bg.jpg);background-size: cover;
+position: relative;}
 .season-product .inner{height: 400px;}
-
+.season-product .inner img:nth-child(2){position: absolute;left: 150px;top: 40px;height: 80%;}
 .season-product .text-group{position: absolute;top: 110px;right: 100px;}
 .season-product .text-group .title,
 .season-product .text-group .description{margin-bottom: 10px;}
 
-/* RESERVE COFFEE------------------------------------ */
-.reserve-coffee{background: url(../images/reserve_bg.jpg);}
-.reserve-coffee .inner{height: 400px;}
-.reserve-coffee .inner .reserv-logo{position: absolute;top: 110px;left: 0;}
-.reserve-coffee .inner .text-group{position: absolute;top: 124px;left: 210px;}
-.reserve-coffee .inner .reserve-image{position: absolute;top: 0px;right: 0;}
+/* INDONESIA COFFEE------------------------------------ */
+.indonesia-coffee{background: url(../images/reserve_2022_indonesia_visual_bg.jpg);background-size: cover;position: relative;}
+.indonesia-coffee .inner{height: 400px;}
+.indonesia-coffee .inner .indonesia-logo{position: absolute;top: 120px;left: 0;}
+.indonesia-coffee .inner .text-group{position: absolute;top: 280px;left: 250px;}
+.indonesia-coffee .inner .img-box{position: absolute;bottom: 0;width: 2000px;right: -500px;z-index: 1;}
+.indonesia-coffee .inner .img-box .indonesia-image{width: 100%;z-index: 1;}
+.indonesia-coffee .not-inner img:first-child{position: absolute; left: 0;bottom: 0;}
+.indonesia-coffee .not-inner img:last-child{position: absolute; right: 0;bottom: 0;}
 
 /* PICK YOUR FAVORITE----------------------------------- */
-.pick-your-favorite{background: url(../images/favorite_bg.jpg) no-repeat center fixed;background-size: cover;}
-.pick-your-favorite .inner{padding: 110px 0;}
+.pick-your-favorite{background: url(../images/favorite_bg.jpg) no-repeat center fixed;background-size: cover;position: relative;}
+.pick-your-favorite .inner{padding: 110px 0;position: relative;}
 .pick-your-favorite .text-group{width: 360px;margin-left: 100px;display: flex;flex-wrap: wrap;justify-content: flex-end;}
 .pick-your-favorite .description{margin: 40px 0;}
+.pick-your-favorite .inner .img-box{position: absolute;right: 0;width: 600px;top: 150px;}
+.pick-your-favorite .inner .img-box .summer_pick{width: 100%;}
+
 
 /* RESERVE STORE */
 .reserve-store{background: url(../images/reserve_store_bg.jpg) no-repeat center fixed;background-size: cover;}
@@ -308,6 +313,12 @@ position: absolute;float: left;top: 0px;left: 250px;}
 /* footer---------------------------------------- */
 footer{background: #272727;color: #ccc;min-width: 1100px;margin: auto;}
 footer .inner{padding: 40px 0 60px;min-width: 1100px;background: #272727;}
+
+/* footer nav */
+footer .inner .footer-submenu{display: flex;justify-content: space-between;margin-bottom: 20px;}
+footer .inner .footer-submenu > li > a{display: block; font-size: 14px;margin-bottom: 10px;font-weight: bold;}
+footer .inner .footer-submenu > li > .submenu__sub > li > a{display: block; font-size: 12px;margin-bottom: 5px;}
+footer .inner .footer-submenu > li > .submenu__sub > li > a:hover{text-decoration: underline;}
 
 /* 개인정보처리방침 메뉴 */
 footer .inner ul.menu{display: flex;justify-content: center;}
