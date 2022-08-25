@@ -1,0 +1,334 @@
+@charset "UTF-8";
+
+/* 공통스타일 정의 */
+body{
+  color: #333;
+  font-size: 16px;
+  font-weight: 400px;
+  line-height: 1.4;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+img{display: block;}
+
+.inner{width: 1100px;margin: auto;position: relative;min-width: 1100px;}
+
+/* 버튼공통 */
+.btn{
+  width: 130px;padding: 10px;
+  border: 2px solid #333;border-radius: 4px;
+  color: #333;font-size: 16px;font-weight: 700;
+  text-align: center;cursor: pointer;box-sizing: border-box;
+  display: block;transition: all 0.4s;
+}
+.btn:hover{background: #333;color: #fff;}
+
+/* 색반전 버튼 */
+.btn--reverse{background: #333;color: #fff;}
+.btn--reverse:hover{background: transparent;color: #333;}
+
+/* 브라운버튼 */
+.btn--brown{color: #592b18;border-color: #592b18;}
+.btn--brown:hover{background: #592b18;}
+
+/* 골드버튼 */
+.btn--gold{color: #d9aa8a;border-color: #d9aa8a;}
+.btn--gold:hover{color: #fff;background: #d9aa8a;}
+
+/* 화이트버튼 */
+.btn--white{color: #fff;border-color: #fff;}
+.btn--white:hover{color: #333;background: #fff;}
+
+/* =================spay================= */
+.back-to-position{opacity: 0;transition: all 1s;}
+
+/* 왼->오 */
+.back-to-position.to-right{transform: translateX(-150px);}
+
+/* 오->왼 */
+.back-to-position.to-left{transform: translateX(150px);}
+
+/* .show가 붙으면 서서히 보이게 제자리로 */
+.show .back-to-position{opacity: 1;transform: translateX(0);}
+
+/* 등장순서 */
+.show .back-to-position.delay-0{transition-delay: 0s;}
+.show .back-to-position.delay-1{transition-delay: 0.3s;}
+.show .back-to-position.delay-2{transition-delay: 0.6s;}
+.show .back-to-position.delay-3{transition-delay: 0.9s;}
+
+/* ======================================= */
+
+/* 공통끝--------------------------------------- */
+
+/* HEADER Area */
+header{width: 100%;background: #f6f5f0;border-bottom: 1px solid #c8c8c8;position: fixed;top: 0;z-index: 10;}
+header > div.inner{height: 120px;}
+header .logo{height: 75px;position: absolute;top: 0;bottom: 0;margin: auto;}
+
+/* sub-menu Area------------------- */
+header div.sub-menu{display: flex;position: absolute;right: 0;top: 10px;font-family: Arial, Helvetica, sans-serif;}
+header div.sub-menu ul.menu{display: flex;}
+header div.sub-menu ul.menu li{position: relative;}
+header div.sub-menu ul.menu li::before{content: "";display: block;width: 1px;height: 12px;background: #e5e5e5;position: absolute;top:0;bottom: 0;margin: auto;}
+header div.sub-menu ul.menu li:first-child:before{display: none;}
+header div.sub-menu ul.menu li a{font-size: 12px;display: block;padding: 11px 16px;color: #656565;}
+header div.sub-menu ul.menu li a:hover{color: #000;}
+
+/* 검색창 */
+header .search{height: 34px;position: relative;}
+header .search input{width: 34px;height: 34px;border: 1px solid #ccc;border-radius: 5px;outline: 0;color: #777;transition: width 0.4s;text-indent: 10px;}
+header .search input:focus{width: 190px;border-color: #669900;}
+header .search .material-icons{height: 24px;position: absolute;top: 0;bottom: 0;margin: auto;right: 5px;transition: opacity 0.4s;}
+
+header .search.focused .material-icons{opacity: 0;}
+
+/* main menu Area---------------------------------------- */
+header nav ul.main-menu{display: flex;position: absolute;bottom: 0;right:0;z-index: 1;}
+header nav ul.main-menu li.item div.item__name{padding: 10px 20px 34px 20px;font-family: Arial, Helvetica, sans-serif;font-size: 13px;cursor: pointer;}
+header nav ul.main-menu li.item:hover div.item__name{background: #2c2a29;color: #669900;border-radius: 6px 6px 0 0;text-decoration: underline;}
+
+/* 서브메뉴 */
+header nav ul.main-menu li.item div.item__contents{width: 100%;position: fixed;left: 0;display: none;} /**/
+header nav ul.main-menu li.item:hover div.item__contents{display: block;}
+
+/* 서브메뉴 1층 */
+header nav ul.main-menu li.item .contents__menu{background: #2c2a29;}
+header nav ul.main-menu li.item .contents__menu ul.inner{display: flex;padding: 20px 0;}
+header nav ul.main-menu li.item .contents__menu ul.inner li{width: 220px;}
+header nav ul.main-menu li.item .contents__menu ul.inner li > h4{font-size: 14px;color: #fff;font-weight: bold;
+padding: 3px 0 12px 0;}
+header nav ul.main-menu li.item .contents__menu ul.inner li > ul > li{color: #999;font-size: 12px;cursor: pointer;padding: 5px 0;}
+header nav ul.main-menu li.item .contents__menu ul.inner li > ul > li:hover{color: #669900;}
+
+/* 서브메뉴 2층 */
+header nav ul.main-menu li.item .contents_texture{background: url(../images/main_menu_pattern.jpg);font-size: 12px;}
+header nav ul.main-menu li.item .contents_texture div.inner{padding: 25px 0;}
+header nav ul.main-menu li.item .contents_texture h4{color: #999;font-weight: 700;}
+header nav ul.main-menu li.item .contents_texture p{color: #669900;margin: 4px 0 14px;}
+
+/* 뱃지영역 */
+.bagtges{position: absolute;top: 132px;right: 10px;}
+.bagtges div img{border-radius: 10px;margin-bottom: 10px;box-shadow: 4px 4px 10px rgba(0,0,0,0.3);cursor: pointer;}
+
+/* mian visual Area------------------------------------ */
+.visual{position: relative;height: 646px;}
+.visual__bg .inner{height: 646px;}
+.visual__bg .bg-left{position: absolute;top: 0;left: 0;width: 50%;height: 100%;
+background-color: #b2e252;}
+.visual__bg .bg-right{position: absolute;top: 0%;right: 0;width: 50%;height: 100%;
+background: #89c5f5;}
+.visual__bg .inner .bg-left{position: absolute;top: 0;left: 0;width: 65%;height: 100%;background: #b2e252;}
+.visual__bg .inner .bg-right{position: absolute;top: 0;left: 0;width: 35%;height: 100%;background: #b2e252;}
+.visual__bg .title{position: absolute;top: 250px;left: -50px;}
+.visual__bg .title .btn{position: absolute;top: 220px;left: 0;right: 0;margin: auto;}
+
+.visual__bg .inner .coffee1{position: absolute;left: 35%;top: 190px;
+width: 240px;}
+.visual__bg .inner .coffee2{position: absolute;left: 55%;top: 210px;
+width: 260px;}
+.visual__bg .inner .coffee3{position: absolute;right: -5%;top: 190px;
+width: 240px;}
+
+.visual .fade-in{opacity: 0;}
+
+/* 공지사항 Area------------------------------------------------ */
+.notice .notice-line{position: relative;}
+.notice .notice-line .bg-left{position: absolute;top: 0;left: 0;width: 50%;height: 100%;background: #333;}
+.notice .notice-line .bg-right{position: absolute;top: 0;right: 0;width: 50%;height: 100%;background: #f6f5ef;}
+
+.notice .notice-line .inner{height: 62px;display: flex;}
+
+/* 왼쪽 */
+.notice .notice-line .inner .inner__left{width: 60%;height:100%;background: #333;display: flex;align-items: center;}
+.notice .notice-line .inner .inner__left h2{color: #fff;font-size: 17px;margin-right: 20px;}
+.notice .notice-line .inner .inner__left .swiper{flex: 1;height: 62px;display: flex;}
+/* flex1은 flex-grow(늘려주는속성)와 같다 */
+.notice .notice-line .inner .inner__left .swiper .swiper-slide{height: 62px;display: flex;align-items: center;}
+.notice .notice-line .inner .inner__left .swiper .swiper-slide a{color: #fff;}
+
+.notice .notice-line .inner .inner__left .notice-line__more{display: flex;width: 62px;height: 62px;justify-content: center;align-items: center;}
+
+.notice .notice-line .inner .inner__left .notice-line__more .material-icons{color: #fff;}
+
+/* 오른쪽 */
+.notice .notice-line .inner .inner__right{width: 40%;height: 100%;display: flex;justify-content: flex-end;align-items: center;}
+.notice .notice-line .inner .inner__right h2{font-size: 17px;font-weight: 700;}
+.notice .notice-line .inner .inner__right .toggle-promotion{width: 62px;height: 62px;cursor: pointer;display: flex;justify-content: center;align-items: center;}
+.notice .notice-line .inner .inner__right .toggle-promotion .material-icons{font-size: 30px;}
+
+/* promotion안에 있는 swiper 슬라이드 */
+.notice .promotion{height: 693px;background: #f6f5ef;position: relative;overflow: hidden;transition: height 0.4s;}
+
+/* toggle버튼으로 class를 뗏다 붙였다 하는 스크립트 */
+.notice .promotion.hide{height: 0;}
+
+/* 819 * 3 + 20 =  2477*/
+.notice .promotion .swiper{width: calc(819px * 3 + 20px);height: 600px;top: 40px;left: 50%;margin-left: calc((819px * 3 + 20px) / -2);}
+
+/* 이미지 투명도 적용 */
+.notice .promotion .swiper .swiper-slide{opacity: 0.5;transition: opacity 1s;position: relative;width: 819px;}
+.notice .promotion .swiper .swiper-slide-active{opacity: 1;}
+
+/* 더보기 버튼 */
+.notice .promotion .swiper .swiper-slide .btn{position: absolute;bottom: 40px;left: 0;right: 0;margin: auto;}
+
+/* pagination */
+.notice .promotion .swiper-pagination{bottom: 0;left: 0;right: 0;z-index: 5;}
+.notice .promotion .swiper-pagination .swiper-pagination-bullet{background: url(../images/promotion_slide_pager.png);width: 12px;height: 12px;background-color: transparent;}
+.notice .promotion .swiper-pagination .swiper-pagination-bullet-active{background: url(../images/promotion_slide_pager_on.png);}
+
+/* 이전다음버튼 */
+.notice .promotion .swiper-prev,
+.notice .promotion .swiper-next{width: 42px;height: 42px;border: 2px solid #333;border-radius: 50%;position: absolute;top: 270px;z-index: 1;cursor: pointer;display: flex;justify-content: center;align-items: center;transition: all 0.4s;}
+.notice .promotion .swiper-prev{left: 50%;margin-left: -480px;}
+.notice .promotion .swiper-next{right: 50%;margin-right: -480px;}
+.notice .promotion .swiper-prev:hover,
+.notice .promotion .swiper-next:hover{background: #333;color: #fff;}
+
+/* REWARDS Area---------------------------------------- */
+.rewards{position: relative;background: #025040;}
+.rewards .inner .bg-left{width: 30%;height: 100%;position: absolute;top: 0;left: 0;float: left;}
+.rewards .inner .bg-center{width: 70%;height: 100%;
+position: absolute;float: left;top: 0px;left: 250px;}
+.rewards .inner .bg-right{width: 10%;height: 100%;position: absolute;top: 0;right: 0;float: left;}
+
+.rewards .inner{height: 241px;}
+.rewards .inner .bg-left .rewards-logo{position: absolute;top: 30px;left: 0;width: 200px;}
+.rewards .inner .bg-left .rewards-logo img{display: block;width: 100%;}
+
+.rewards .inner .bg-center .text-group1{color: #fff;padding-top: 20px;}
+.rewards .inner .bg-center .text-group1 h3{font-size: 25px;font-weight: bold;margin-bottom: 10px;}
+.rewards .inner .bg-center .text-group1 p{font-size: 14px;line-height: 1.7;}
+.rewards .inner .bg-center .text-group1 .textbold{font-size: 18px;font-weight: bold;}
+
+.rewards .inner .bg-center .text-group2{color: #fff;border-top: 1px solid #fff;margin-top: 15px;}
+
+
+.rewards .btn-group{position: absolute;right: 0;bottom: 24px;display: flex;flex-wrap: wrap;width: 250px;}
+.rewards .btn-group .join{margin-right: 10px;}
+.rewards .btn-group .sign-in{width: 110px;}
+.rewards .btn-group .gift{flex: 1;margin-top: 10px;}
+
+/* .rewards{position: relative;}
+.rewards .bg-left{width: 50%;height: 100%;position: absolute;top: 0;left: 0;background: #272727;}
+.rewards .bg-right{width: 50%;height: 100%;position: absolute;top: 0;right: 0;background: #d5c798;}
+
+.rewards .inner{background: url(../images/rewards.jpg);height: 241px;}
+
+.rewards .btn-group{position: absolute;right: 0;bottom: 24px;display: flex;flex-wrap: wrap;width: 250px;}
+.rewards .btn-group .join{margin-right: 10px;}
+.rewards .btn-group .sign-in{width: 110px;}
+.rewards .btn-group .gift{flex: 1;margin-top: 10px;} */
+
+/* 유투브 영상------------------------------------ */
+.youtube{position: relative;height: 700px;background: #333;overflow: hidden;}
+
+/* 영상 맞춤 */
+.youtube .youtube__area{width: 1920px;position: absolute;left: 50%;margin-left: calc(1920px / -2);top: 50%;margin-top: calc(1920px * 9 / 16 / -2);}
+.youtube .youtube__area::before{content: "";display: block;width: 100%;height: 0;padding-top: 56.25%;}
+.youtube .youtube__area #player{width: 100%;height: 100%;position: absolute;top: 0;left: 0;}
+
+/* 영상 커버 */
+.youtube .youtube__corver{background: url(../images/video_cover_pattern.png);position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+
+/* 플로팅이미지 */
+.youtube .inner{height: 700px;}
+.youtube .inner .floating1{position: absolute;top: 50px;left: 0;}
+.youtube .inner .floating2{position: absolute;top: 350px;left: 150px;}
+.season-product .floating3{position: absolute;top: -200px;right: 0;}
+
+/* SEASON PRODUCT---------------------------------- */
+.season-product{background: url(../images/season_product_bg.jpg);}
+.season-product .inner{height: 400px;}
+
+.season-product .text-group{position: absolute;top: 110px;right: 100px;}
+.season-product .text-group .title,
+.season-product .text-group .description{margin-bottom: 10px;}
+
+/* RESERVE COFFEE------------------------------------ */
+.reserve-coffee{background: url(../images/reserve_bg.jpg);}
+.reserve-coffee .inner{height: 400px;}
+.reserve-coffee .inner .reserv-logo{position: absolute;top: 110px;left: 0;}
+.reserve-coffee .inner .text-group{position: absolute;top: 124px;left: 210px;}
+.reserve-coffee .inner .reserve-image{position: absolute;top: 0px;right: 0;}
+
+/* PICK YOUR FAVORITE----------------------------------- */
+.pick-your-favorite{background: url(../images/favorite_bg.jpg) no-repeat center fixed;background-size: cover;}
+.pick-your-favorite .inner{padding: 110px 0;}
+.pick-your-favorite .text-group{width: 360px;margin-left: 100px;display: flex;flex-wrap: wrap;justify-content: flex-end;}
+.pick-your-favorite .description{margin: 40px 0;}
+
+/* RESERVE STORE */
+.reserve-store{background: url(../images/reserve_store_bg.jpg) no-repeat center fixed;background-size: cover;}
+.reserve-store .inner{height: 600px;display: flex;justify-content: center;align-items: center;}
+
+.reserve-store .inner .medal{width: 334px;height: 334px;perspective: 600px;}
+
+.reserve-store .inner .medal .front,
+.reserve-store .inner .medal .back{width: 334px;height: 334px;backface-visibility: hidden;transition: all 1s;position: absolute;}
+.reserve-store .inner .medal .back a.btn{position: absolute;top: 240px;left: 0;right: 0;margin: auto;}
+
+.reserve-store .inner .medal .front{position: absolute;transform: rotateY(0deg);}
+.reserve-store .inner .medal .back{transform: rotateY(-180deg);}
+
+.reserve-store .inner .medal:hover .front{transform: rotateY(-180deg);}
+.reserve-store .inner .medal:hover .back{transform: rotateY(0deg);}
+
+/* FIND THE STORE---------------------------------- */
+.find-the-store{background: url(../images/find_store_bg.jpg);}
+.find-the-store .inner{height: 400px;}
+
+/* 매장이미지 */
+.find-the-store .inner .picture{border-radius: 50%;box-shadow: 2px 2px 8px rgba(0,0,0,0.5);position: absolute;}
+.find-the-store .inner .pic1{top: -60px;left: 0;}
+.find-the-store .inner .pic2{top: 150px;left: 250px;}
+
+/* 원두, 매장 일러스트 이미지 */
+.find-the-store .inner .texture1{position: absolute;top: 0;left: 400px;}
+.find-the-store .inner .texture2{position: absolute;bottom: 0;right: 0;}
+
+/* text-group */
+.find-the-store .inner .text-group{position: absolute;top: 120px;left: 550px;}
+.find-the-store .inner .text-group .discription{margin: 20px 0;}
+
+/* AWARDS--------------------------------------------- */
+.awards{background: #272727;}
+.awards .inner{padding: 40px 0;}
+.awards .inner .swiper{width: 100%;height: 40px;}
+
+/* prev, next btn */
+.awards .inner .swiper-prev,
+.awards .inner .swiper-next{width: 42px;height: 42px;border: 2px solid #fff;border-radius: 50%;background: #c8c8c8;opacity: 0.3;color: #fff;display: flex;justify-content: center;align-items: center;position: absolute;top: 0;bottom: 0;margin:auto;transition: all 0.4s;cursor: pointer;}
+.awards .inner .swiper-prev{left: -100px;}
+.awards .inner .swiper-next{right: -100px;}
+
+.awards .inner .swiper-prev:hover,
+.awards .inner .swiper-next:hover{background: #fff;color: #333;}
+
+/* footer---------------------------------------- */
+footer{background: #272727;color: #ccc;min-width: 1100px;margin: auto;}
+footer .inner{padding: 40px 0 60px;min-width: 1100px;background: #272727;}
+
+/* 개인정보처리방침 메뉴 */
+footer .inner ul.menu{display: flex;justify-content: center;}
+footer .inner ul.menu li{position: relative;}
+footer .inner ul.menu li::before{content: "";width: 3px;height: 3px;background: #555;position: absolute;top: 0;bottom: 0;margin: auto;display: block;}
+footer .inner ul.menu li:first-child::before{display: none;}
+footer .inner ul.menu li a{display: block;padding: 15px;font-size: 12px;font-weight: 700;}
+footer .inner ul.menu li:first-child a{color: #669900;}
+
+/* 찾아오시는길 버튼 */
+footer .inner .btn-group{display: flex;justify-content: center;padding: 20px 0 40px;}
+footer .inner .btn-group a:nth-child(2){margin: 0 10px;}
+
+/* 주소 */
+footer .inner address,
+footer .inner p{text-align: center;color: #999;font-size: 12px;margin-bottom: 15px;}
+
+/* 하단로고 */
+footer .inner .bottom-logo{margin: 30px auto 0;}
+
+/* to-top 버튼 */
+#to-top{position: fixed;bottom: 30px;right: 30px;z-index: 100;width: 40px;height: 40px;border: 2px solid #fff;padding: 20px;border-radius: 10px;background: #333;display: flex;justify-content: center;align-items: center;cursor: pointer;}
+
+#to-top .material-icons{color: #fff;font-size: 25px;}
