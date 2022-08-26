@@ -250,9 +250,9 @@ position: relative;}
 .pick-your-favorite .inner .img-box .summer_pick{width: 100%;}
 
 
-/* reserve coffee */
+/* reserve magazine */
 .reserve-magazine{background: url(../images/reserve_bg_pc.png) no-repeat center;position: relative;}
-.reserve-magazine .inner{height: 600px;display: flex;justify-content: center;align-items: center;}
+.reserve-magazine .inner{height: 500px;display: flex;justify-content: center;align-items: center;}
 .reserve-magazine .inner .text-group{position: absolute;left: 0;}
 .reserve-magazine .inner .text-group .btn{position: absolute;left: 250px;top: 40px;}
 .reserve-magazine .inner .img-box{position: absolute;right: 80px;}
