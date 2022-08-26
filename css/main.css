@@ -64,12 +64,12 @@ img{display: block;}
 
 /* 공통끝--------------------------------------- */
 
-/* HEADER Area */
+/* header area */
 header{width: 100%;background: #f6f5f0;border-bottom: 1px solid #c8c8c8;position: fixed;top: 0;z-index: 10;}
 header > div.inner{height: 120px;}
 header .logo{height: 75px;position: absolute;top: 0;bottom: 0;margin: auto;}
 
-/* sub-menu Area------------------- */
+/* sub-menu area------------------- */
 header div.sub-menu{display: flex;position: absolute;right: 0;top: 10px;font-family: Arial, Helvetica, sans-serif;}
 header div.sub-menu ul.menu{display: flex;}
 header div.sub-menu ul.menu li{position: relative;}
@@ -78,7 +78,7 @@ header div.sub-menu ul.menu li:first-child:before{display: none;}
 header div.sub-menu ul.menu li a{font-size: 12px;display: block;padding: 11px 16px;color: #656565;}
 header div.sub-menu ul.menu li a:hover{color: #000;}
 
-/* 검색창 */
+/* search */
 header .search{height: 34px;position: relative;}
 header .search input{width: 34px;height: 34px;border: 1px solid #ccc;border-radius: 5px;outline: 0;color: #777;transition: width 0.4s;text-indent: 10px;}
 header .search input:focus{width: 190px;border-color: #669900;}
@@ -86,7 +86,7 @@ header .search .material-icons{height: 24px;position: absolute;top: 0;bottom: 0;
 
 header .search.focused .material-icons{opacity: 0;}
 
-/* main menu Area---------------------------------------- */
+/* main menu area---------------------------------------- */
 header nav ul.main-menu{display: flex;position: absolute;bottom: 0;right:0;z-index: 1;}
 header nav ul.main-menu li.item div.item__name{padding: 10px 20px 34px 20px;font-family: Arial, Helvetica, sans-serif;font-size: 13px;cursor: pointer;}
 header nav ul.main-menu li.item:hover div.item__name{background: #2c2a29;color: #669900;border-radius: 6px 6px 0 0;text-decoration: underline;}
@@ -135,14 +135,14 @@ width: 240px;}
 
 .visual .fade-in{opacity: 0;}
 
-/* 공지사항 Area------------------------------------------------ */
+/* notice Area------------------------------------------------ */
 .notice .notice-line{position: relative;}
 .notice .notice-line .bg-left{position: absolute;top: 0;left: 0;width: 50%;height: 100%;background: #333;}
 .notice .notice-line .bg-right{position: absolute;top: 0;right: 0;width: 50%;height: 100%;background: #f6f5ef;}
 
 .notice .notice-line .inner{height: 62px;display: flex;}
 
-/* 왼쪽 */
+/* left */
 .notice .notice-line .inner .inner__left{width: 60%;height:100%;background: #333;display: flex;align-items: center;}
 .notice .notice-line .inner .inner__left h2{color: #fff;font-size: 17px;margin-right: 20px;}
 .notice .notice-line .inner .inner__left .swiper{flex: 1;height: 62px;display: flex;}
@@ -154,7 +154,7 @@ width: 240px;}
 
 .notice .notice-line .inner .inner__left .notice-line__more .material-icons{color: #fff;}
 
-/* 오른쪽 */
+/* right */
 .notice .notice-line .inner .inner__right{width: 40%;height: 100%;display: flex;justify-content: flex-end;align-items: center;}
 .notice .notice-line .inner .inner__right h2{font-size: 17px;font-weight: 700;}
 .notice .notice-line .inner .inner__right .toggle-promotion{width: 62px;height: 62px;cursor: pointer;display: flex;justify-content: center;align-items: center;}
@@ -173,7 +173,7 @@ width: 240px;}
 .notice .promotion .swiper .swiper-slide{opacity: 0.5;transition: opacity 1s;position: relative;width: 819px;}
 .notice .promotion .swiper .swiper-slide-active{opacity: 1;}
 
-/* 더보기 버튼 */
+/* plus btn */
 .notice .promotion .swiper .swiper-slide .btn{position: absolute;bottom: 40px;left: 0;right: 0;margin: 0 auto 15px;}
 
 /* pagination */
@@ -181,7 +181,7 @@ width: 240px;}
 .notice .promotion .swiper-pagination .swiper-pagination-bullet{background: url(../images/promotion_slide_pager.png);width: 12px;height: 12px;background-color: transparent;}
 .notice .promotion .swiper-pagination .swiper-pagination-bullet-active{background: url(../images/promotion_slide_pager_on.png);}
 
-/* 이전다음버튼 */
+/* prev next btn */
 .notice .promotion .swiper-prev,
 .notice .promotion .swiper-next{width: 42px;height: 42px;border: 2px solid #333;border-radius: 50%;position: absolute;top: 270px;z-index: 1;cursor: pointer;display: flex;justify-content: center;align-items: center;transition: all 0.4s;}
 .notice .promotion .swiper-prev{left: 50%;margin-left: -480px;}
@@ -189,7 +189,7 @@ width: 240px;}
 .notice .promotion .swiper-prev:hover,
 .notice .promotion .swiper-next:hover{background: #333;color: #fff;}
 
-/* REWARDS Area---------------------------------------- */
+/* reward area---------------------------------------- */
 .rewards{position: relative;background: #025040;}
 .rewards .inner .bg-left{width: 20%;height: 100%;position: absolute;top: 0;left: 0;float: left;}
 .rewards .inner .bg-right{width: 80%;height: 100%;
@@ -218,33 +218,16 @@ position: absolute;float: left;top: 0;right: 0;}
 .rewards .btn-group .gift{margin-top: 15px;
 width: 230px;height: 45px;margin-left: 20px;}
 
-/* 유투브 영상------------------------------------ */
-.youtube{position: relative;height: 700px;background: #333;overflow: hidden;}
-
-/* 영상 맞춤 */
-.youtube .youtube__area{width: 1920px;position: absolute;left: 50%;margin-left: calc(1920px / -2);top: 50%;margin-top: calc(1920px * 9 / 16 / -2);}
-.youtube .youtube__area::before{content: "";display: block;width: 100%;height: 0;padding-top: 56.25%;}
-.youtube .youtube__area #player{width: 100%;height: 100%;position: absolute;top: 0;left: 0;}
-
-/* 영상 커버 */
-.youtube .youtube__corver{background: url(../images/video_cover_pattern.png);position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
-
-/* 플로팅이미지 */
-.youtube .inner{height: 700px;}
-.youtube .inner .floating1{position: absolute;top: 50px;left: 0;}
-.youtube .inner .floating2{position: absolute;top: 350px;left: 150px;}
-.season-product .floating3{position: absolute;top: -200px;right: 0;}
-
-/* VOYAGE BLEND---------------------------------- */
+/* voyage blend ---------------------------------- */
 .season-product{background: url(../images/2022_Summer2_bean_bg.jpg);background-size: cover;
 position: relative;}
 .season-product .inner{height: 400px;}
-.season-product .inner img:nth-child(2){position: absolute;left: 150px;top: 40px;height: 80%;}
-.season-product .text-group{position: absolute;top: 110px;right: 100px;}
+.season-product .inner .voyage-blend{height: 80%;position: absolute;top: 50px;left: 200px;}
+.season-product .text-group{position: absolute;top: 110px;right: 80px;}
 .season-product .text-group .title,
 .season-product .text-group .description{margin-bottom: 10px;}
 
-/* INDONESIA COFFEE------------------------------------ */
+/* indonesia coffee ------------------------------------ */
 .indonesia-coffee{background: url(../images/reserve_2022_indonesia_visual_bg.jpg);background-size: cover;position: relative;}
 .indonesia-coffee .inner{height: 400px;}
 .indonesia-coffee .inner .indonesia-logo{position: absolute;top: 120px;left: 0;z-index: 3;}
@@ -254,7 +237,7 @@ position: relative;}
 .indonesia-coffee .not-inner img:first-child{position: absolute; left: 0;bottom: 0;}
 .indonesia-coffee .not-inner img:last-child{position: absolute; right: 0;bottom: 0;z-index: 1;}
 
-/* PICK YOUR FAVORITE----------------------------------- */
+/* pick your favorate ----------------------------------- */
 .pick-your-favorite{background: url(../images/favorite_bg.jpg) no-repeat center fixed;background-size: cover;position: relative;}
 .pick-your-favorite .inner{padding: 110px 0;position: relative;}
 .pick-your-favorite .text-group{width: 360px;margin-left: 100px;display: flex;flex-wrap: wrap;justify-content: flex-end;}
@@ -263,23 +246,14 @@ position: relative;}
 .pick-your-favorite .inner .img-box .summer_pick{width: 100%;}
 
 
-/* RESERVE STORE */
-.reserve-store{background: url(../images/reserve_store_bg.jpg) no-repeat center fixed;background-size: cover;}
-.reserve-store .inner{height: 600px;display: flex;justify-content: center;align-items: center;}
+/* reserve coffee */
+.reserve-magazine{background: url(../images/reserve_bg_pc.png) no-repeat center;position: relative;}
+.reserve-magazine .inner{height: 600px;display: flex;justify-content: center;align-items: center;}
+.reserve-magazine .inner .text-group{position: absolute;left: 0;}
+.reserve-magazine .inner .text-group .btn{position: absolute;left: 250px;top: 40px;}
+.reserve-magazine .inner .img-box{position: absolute;right: 80px;}
 
-.reserve-store .inner .medal{width: 334px;height: 334px;perspective: 600px;}
-
-.reserve-store .inner .medal .front,
-.reserve-store .inner .medal .back{width: 334px;height: 334px;backface-visibility: hidden;transition: all 1s;position: absolute;}
-.reserve-store .inner .medal .back a.btn{position: absolute;top: 240px;left: 0;right: 0;margin: auto;}
-
-.reserve-store .inner .medal .front{position: absolute;transform: rotateY(0deg);}
-.reserve-store .inner .medal .back{transform: rotateY(-180deg);}
-
-.reserve-store .inner .medal:hover .front{transform: rotateY(-180deg);}
-.reserve-store .inner .medal:hover .back{transform: rotateY(0deg);}
-
-/* FIND THE STORE---------------------------------- */
+/* find the store ---------------------------------- */
 .find-the-store{background: url(../images/find_store_bg.jpg);}
 .find-the-store .inner{height: 400px;}
 
@@ -303,7 +277,7 @@ position: relative;}
 
 /* prev, next btn */
 .awards .inner .swiper-prev,
-.awards .inner .swiper-next{width: 42px;height: 42px;border: 2px solid #fff;border-radius: 50%;background: #c8c8c8;opacity: 0.3;color: #fff;display: flex;justify-content: center;align-items: center;position: absolute;top: 0;bottom: 0;margin:auto;transition: all 0.4s;cursor: pointer;}
+.awards .inner .swiper-next{width: 42px;height: 42px;border: 2px solid #fff;border-radius: 50%;background: #000000;opacity: 0.3;color: #fff;display: flex;justify-content: center;align-items: center;position: absolute;top: 0;bottom: 0;margin:auto;transition: all 0.4s;cursor: pointer;}
 .awards .inner .swiper-prev{left: -100px;}
 .awards .inner .swiper-next{right: -100px;}
 
