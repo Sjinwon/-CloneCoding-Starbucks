@@ -22,13 +22,17 @@ img{display: block;}
 }
 .btn:hover{background: #333;color: #fff;text-decoration: underline;}
 
-/* 색반전 버튼 */
-.btn--reverse{background: rgb(11, 128, 54);color: #fff;border-color: rgb(11, 128, 54);}
-.btn--reverse:hover{background: transparent;color: #fff;border-color: #fff;}
-
 /* 화이트버튼 */
-.btn--white{color: #fff;border-color: #fff;}
-.btn--white:hover{color: rgb(14, 64, 43);background: #fff;text-decoration: underline;}
+.btn--white{background: transparent;color: rgb(255, 255, 255);border-color: rgb(255, 255, 255);}
+.btn--white:hover{background: #fff;color: #333;border-color: #333;}
+
+/* 화이트버튼 리버스 */
+.btn--white--reverse{background: transparent;color: rgb(255, 255, 255);border-color: rgb(255, 255, 255);}
+.btn--white--reverse:hover{background: #333;color: #fff;border-color: #333;}
+
+/* 그린버튼 호버 화이트 리버스 */
+.btn--green--reverse{background: rgb(11, 128, 54);color: #fff;border-color: rgb(11, 128, 54);}
+.btn--green--reverse:hover{background: transparent;color: #fff;border-color: #fff;}
 
 /* 골드버튼 */
 .btn--gold{color: #d9aa8a;border-color: #d9aa8a;}
@@ -36,11 +40,11 @@ img{display: block;}
 
 /* 화이트버튼 호버 그린 */
 .btn--white--green{color: #fff;border-color: #fff;}
-.btn--white--green:hover{color: rgb(169, 223, 83);background: #fff;text-decoration: underline;}
+.btn--white--green:hover{color: rgb(169, 223, 83);background: #fff;}
 
 /* 화이트버튼 호버 그린 */
 .btn--white--darkgreen{color: #fff;border-color: #fff;}
-.btn--white--darkgreen:hover{color: rgb(7, 63, 50);background: #fff;text-decoration: underline;}
+.btn--white--darkgreen:hover{color: rgb(7, 63, 50);background: #fff;}
 
 /* =================spay================= */
 .back-to-position{opacity: 0;transition: all 1s;}
