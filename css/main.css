@@ -92,7 +92,7 @@ header .search.focused .material-icons{opacity: 0;}
 
 /* main menu area---------------------------------------- */
 header nav ul.main-menu{display: flex;position: absolute;bottom: 0;right:0;z-index: 1;}
-header nav ul.main-menu li.item div.item__name{padding: 10px 20px 34px 20px;font-family: Arial, Helvetica, sans-serif;font-size: 13px;cursor: pointer;}
+header nav ul.main-menu li.item div.item__name{padding: 10px 20px 34px 20px;font-family: Arial, Helvetica, sans-serif;font-size: 13px;}
 header nav ul.main-menu li.item:hover div.item__name{background: #2c2a29;color: #669900;border-radius: 6px 6px 0 0;text-decoration: underline;}
 
 /* 서브메뉴 */
@@ -105,7 +105,7 @@ header nav ul.main-menu li.item .contents__menu ul.inner{display: flex;padding: 
 header nav ul.main-menu li.item .contents__menu ul.inner li{width: 220px;}
 header nav ul.main-menu li.item .contents__menu ul.inner li > h4{font-size: 14px;color: #fff;font-weight: bold;
 padding: 3px 0 12px 0;}
-header nav ul.main-menu li.item .contents__menu ul.inner li > ul > li{color: #999;font-size: 12px;cursor: pointer;padding: 5px 0;}
+header nav ul.main-menu li.item .contents__menu ul.inner li > ul > li{color: #999;font-size: 12px;padding: 5px 0;}
 header nav ul.main-menu li.item .contents__menu ul.inner li > ul > li:hover{color: #669900;}
 
 /* 서브메뉴 2층 */
@@ -121,20 +121,20 @@ header nav ul.main-menu li.item .contents_texture p{color: #669900;margin: 4px 0
 /* mian visual Area------------------------------------ */
 .visual{position: relative;height: 646px;}
 .visual__bg .inner{height: 646px;}
-.visual__bg .bg-left{position: absolute;top: 0;left: 0;width: 50%;height: 100%;
+.visual__bg > .bg-left{position: absolute;top: 0;left: 0;width: 50%;height: 100%;
 background-color: #b2e252;}
-.visual__bg .bg-right{position: absolute;top: 0%;right: 0;width: 50%;height: 100%;
+.visual__bg > .bg-right{position: absolute;top: 0%;right: 0;width: 50%;height: 100%;
 background: #89c5f5;}
 .visual__bg .inner .bg-left{position: absolute;top: 0;left: 0;width: 65%;height: 100%;background: #b2e252;}
 .visual__bg .inner .bg-right{position: absolute;top: 0;left: 0;width: 35%;height: 100%;background: #b2e252;}
 .visual__bg .title{position: absolute;top: 250px;left: -50px;}
 .visual__bg .title .btn{position: absolute;top: 220px;left: 0;right: 0;margin: auto;}
 
-.visual__bg .inner .coffee1{position: absolute;left: 35%;top: 190px;
+.visual__bg .inner .coffee1{position: absolute;left: 34%;top: 190px;
 width: 240px;}
-.visual__bg .inner .coffee2{position: absolute;left: 55%;top: 210px;
+.visual__bg .inner .coffee2{position: absolute;left: 54%;top: 210px;
 width: 260px;}
-.visual__bg .inner .coffee3{position: absolute;right: -5%;top: 190px;
+.visual__bg .inner .coffee3{position: absolute;right: -4%;top: 190px;
 width: 240px;}
 
 .visual .fade-in{opacity: 0;}
@@ -234,8 +234,8 @@ position: relative;}
 /* indonesia coffee ------------------------------------ */
 .indonesia-coffee{background: url(../images/reserve_2022_indonesia_visual_bg.jpg);background-size: cover;position: relative;}
 .indonesia-coffee .inner{height: 400px;}
-.indonesia-coffee .inner .indonesia-logo{position: absolute;top: 120px;left: 0;z-index: 3;}
-.indonesia-coffee .inner .text-group{position: absolute;top: 280px;left: 250px;z-index: 3;}
+.indonesia-coffee .inner .indonesia-logo{position: absolute;top: 120px;left: 10px;z-index: 3;}
+.indonesia-coffee .inner .text-group{position: absolute;top: 280px;left: 260px;z-index: 3;}
 .indonesia-coffee .inner .img-box{position: absolute;bottom: 0;width: 2000px;right: -500px;z-index: 1;}
 .indonesia-coffee .inner .img-box .indonesia-image{width: 100%;}
 .indonesia-coffee .not-inner img:first-child{position: absolute; left: 0;bottom: 0;}
