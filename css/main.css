@@ -247,12 +247,12 @@ position: relative;}
 /* INDONESIA COFFEE------------------------------------ */
 .indonesia-coffee{background: url(../images/reserve_2022_indonesia_visual_bg.jpg);background-size: cover;position: relative;}
 .indonesia-coffee .inner{height: 400px;}
-.indonesia-coffee .inner .indonesia-logo{position: absolute;top: 120px;left: 0;}
-.indonesia-coffee .inner .text-group{position: absolute;top: 280px;left: 250px;}
+.indonesia-coffee .inner .indonesia-logo{position: absolute;top: 120px;left: 0;z-index: 3;}
+.indonesia-coffee .inner .text-group{position: absolute;top: 280px;left: 250px;z-index: 3;}
 .indonesia-coffee .inner .img-box{position: absolute;bottom: 0;width: 2000px;right: -500px;z-index: 1;}
-.indonesia-coffee .inner .img-box .indonesia-image{width: 100%;z-index: 1;}
+.indonesia-coffee .inner .img-box .indonesia-image{width: 100%;}
 .indonesia-coffee .not-inner img:first-child{position: absolute; left: 0;bottom: 0;}
-.indonesia-coffee .not-inner img:last-child{position: absolute; right: 0;bottom: 0;}
+.indonesia-coffee .not-inner img:last-child{position: absolute; right: 0;bottom: 0;z-index: 1;}
 
 /* PICK YOUR FAVORITE----------------------------------- */
 .pick-your-favorite{background: url(../images/favorite_bg.jpg) no-repeat center fixed;background-size: cover;position: relative;}
