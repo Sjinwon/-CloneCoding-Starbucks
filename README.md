@@ -1,6 +1,6 @@
 [![Starbucks](./favicon.ico)](https://sjinwon.github.io/-CloneCoding-Starbucks/)
 
-# 프로젝트명 : Starbucks CloneCoding
+# Starbucks CloneCoding
 
 ### 제작기간 : 5일
 
