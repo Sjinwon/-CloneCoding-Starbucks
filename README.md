@@ -1,4 +1,4 @@
-[![Starbucks](./favicon.png)](https://sjinwon.github.io/-CloneCoding-Starbucks/)
+[![Starbucks](./favicon.ico)](https://sjinwon.github.io/-CloneCoding-Starbucks/)
 
 # 프로젝트명 : Starbucks CloneCoding
 
@@ -20,13 +20,17 @@ og:image: 페이지의 대표 이미지 주소(URL)
 og:url: 페이지 주소(URL)
 ```
 
+<br>
+
 ## SEO (검색엔진 최적화, Search Engine Optimization) 
 구글이나 네이버 등에 자신의 웹 사이트/페이지를 노출할 수 있도록 정보를 최적화하는 작업을 말한다.
 
-```
+``` html
 <meta property="og:image" content="./images/starbucks_seo.jpg" />
 <meta property="twitter:image" content="./images/starbucks_seo.jpg" />
 ```
+
+<br>
 
 ## Google fonts 
 페이지에서 사용할 '나눔 고딕'폰트를 지정한다.
@@ -35,6 +39,8 @@ og:url: 페이지 주소(URL)
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
 ```
+
+<br>
 
 ## Google Material Icons
 구글 머터리얼 아이콘을 사용했다.
@@ -51,16 +57,27 @@ og:url: 페이지 주소(URL)
 <div class="material-icons">upload</div>
 ```
 
+<br>
+
 ## Lodash를 활용하여 scroll 함수 제어하기
-- scroll 이벤트가 계속 실행되면 사이트가 무거워 질 수 있으므로 이런 부분을 제어 할 수 있는 플러그인인 lodash 활용
+scroll 이벤트가 계속 실행되면 사이트가 무거워 질 수 있으므로 이런 부분을 제어 할 수 있는 플러그인인 lodash 활용
+
+``` html
+  <!-- lodash 스크롤 함수 제어 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+```
+
+<br>
 
 ## Gsap을 이용해 애니메이션 효과 주기
 GSAP(The GreenSock Animation Platform)은 자바스크립트로 제어하는 타임라인 기반의 애니메이션 라이브러리입니다. ScrollToPlugin은 스크롤 애니메이션을 지원하는 GSAP 플러그인입니다.
 
-``` javascript
+``` html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js" integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q==" crossorigin="anonymous"></script>
 ```
+
+<br>
 
 ## Youtube API
 Iframe Player API를 통해 youtube 동영상을 제어할 수 있다.
@@ -105,9 +122,11 @@ function onYouTubePlayerAPIReady() {
 }
 ```
 
+<br>
+
 ## 랜덤한 숫자를 생성하는 함수
 
-> javascript
+### *javascript*
 ``` javascript
 // 범위 랜덤 함수(소수점 2자리까지)
 function random(min, max) {
@@ -117,17 +136,19 @@ function random(min, max) {
 }
 ```
 
+<br>
+
 ## ScrollMagic
 ScrollMagic은 스크롤과 요소의 상호 작용을 위한 자바스크립트 라이브러리
 대표적으로 어떤 요소가 현재 화면에 보이는 상태인지를 확인할 때 사용한다.
 
-> html
+### *html*
 
 ``` html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
 ```
 
-> javascript
+### *javascript*
 
 ``` javascript
 new ScrollMagic
@@ -139,6 +160,8 @@ new ScrollMagic
   .addTo(new ScrollMagic.Controller()) // 컨트롤러에 장면을 할당(필수!)
 ```
 
+<br>
+
 ## Swiper Slide
 스타벅스 프로모션 버튼을 누르면 나오는 슬라이드와 푸터영역에 있는 Awards 영역을 Swiper slider를 사용했다.
 
@@ -149,7 +172,7 @@ new ScrollMagic
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 ```
 
-> html
+### *html*
 
 ``` html
 <!-- Slider main container -->
@@ -174,7 +197,7 @@ new ScrollMagic
 </div>
 ```
 
-> javascript
+### *javascript*
 ``` javascript
 //1.버튼을 누르면 프로모션영역이 접혔다 펼쳤다 할수있는 영역을 변수로 할당
 const promotionEl = document.querySelector('.promotion');
@@ -214,14 +237,16 @@ new Swiper(".awards .swiper", {
 });
 ```
 
+<br>
+
 ## 출처에 있는 년도 해마다 자동으로 반영하기
 
-> html
+### *html*
 ``` html
 <p>&copy;<span class="this-year"></span> Starbucks Coffee Company. All Rights Reserved.</p>
 ```
 
-> javascript
+### *javascript*
 ``` javascript
 //footer 해마다 년도가 자동으로 변경
 const thisYear = document.querySelector('.this-year');
